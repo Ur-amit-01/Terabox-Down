@@ -6,4 +6,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD python3 terabox.py
+CMD gunicorn app:app & python3 terabox.py
